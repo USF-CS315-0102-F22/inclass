@@ -7,6 +7,9 @@ SORT_OBJS = sort.o sort_c.o find_max_index_c.o
 %.o: %.c
 	gcc -g -c -o $@ $<
 
+%.o : %.s
+	as -g -o $@ $<
+
 all: $(PROGS)
 
 to_upper: $(TO_UPPER_OBJS)
