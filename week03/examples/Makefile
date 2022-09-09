@@ -34,4 +34,4 @@ sizes : $(SIZES_OBJS)
 
 clean :
 	rm -rf $(PROGS) $(SUMARR_OBJS) $(SIZES_OBJS) $(ADD4_OBJS) \
-		   $(STRLEN_OBJS) $(COUNTC_OBJS)
+	       $(STRLEN_OBJS) $(COUNTC_OBJS)
