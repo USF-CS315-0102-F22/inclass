@@ -111,7 +111,7 @@ add4_saved_s:
 # This version uses the stack directly to store the
 # intermediate value.
 add4_s:
-    addi sp, sp, 32  # Alloacte 32 / 8 = 4 double words
+    addi sp, sp, -32  # Alloacte 32 / 8 = 4 double words
     sd ra, 0(sp)     # Save ra
 
     sd a2, 8(sp)     # Save a2
