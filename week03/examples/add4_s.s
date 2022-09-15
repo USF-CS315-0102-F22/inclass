@@ -77,7 +77,7 @@ add4_saved_s:
     sd ra, 0(sp)       # Save ra
     sd s0, 8(sp)       # Save s0
     sd s1, 16(sp)      # Save s1
-
+    
     sd a2, 24(sp)      # We need to preserve a2 and a3 just in case
     sd a3, 32(sp)      # add2_s were to modify these registers.
                        # All the a regs and t regs are caller-saved.
