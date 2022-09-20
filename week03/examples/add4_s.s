@@ -77,16 +77,16 @@ add4_saved_s:
     sd ra, 0(sp)       # Save ra
     sd s0, 8(sp)       # Save s0
     sd s1, 16(sp)      # Save s1
-    
-    sd a2, 24(sp)      # We need to preserve a2 and a3 just in case
-    sd a3, 32(sp)      # add2_s were to modify these registers.
-                       # All the a regs and t regs are caller-saved.
+    sd s2, 24(sp)
+    sd s3, 32(sp)
+
+    mv s2, a2
+    mv s3, a3
     call add2_s
     mv s0, a0          # s0 = a0 (a + b)
 
-    ld a0, 24(sp)      # Restore a2, put into a0
-    ld a1, 32(sp)      # Restore a3, put into a1
-
+    mv a0, s2
+    mv a1, s3
     call add2_s
     mv s1, a0          # s1 = a0 (c + d)
 
@@ -96,6 +96,8 @@ add4_saved_s:
 
     ld s0, 8(sp)       # Restore s0
     ld s1, 16(sp)      # Restore s1
+    ld s2, 24(sp)
+    ld s3, 32(sp)
     ld ra, (sp)        # Restore ra
     addi sp, sp, 40    # Dealloate stack space
     ret 
