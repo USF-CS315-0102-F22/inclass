@@ -14,6 +14,5 @@ int get_bitseq_signed_c(int32_t num, int start, int end) {
     val_signed = ((int) val) >> shift_amt;
 
     return val_signed;
-    
 }
     
