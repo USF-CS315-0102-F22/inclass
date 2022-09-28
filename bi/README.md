@@ -10,7 +10,9 @@ $ cd ~/cs315/inclass/bi
 $ ln -s ~/.local/bin/bi bi
 ```
 
-Add the contents of ```bi_aliases``` to your ```~/.bash_aliases``` file.
+Add the contents of ```bi_aliases``` to your ```~/.bash_aliases``` file. Make sure to 
+```source ~/.bash_aliases``` or logout and log back in to get the shell to recognize
+the aliases.
 
 
 ## Usage
@@ -33,7 +35,7 @@ usage: bi start,end [start,end ...] value
 0:	00b50533          	add	a0,a0,a1
 ```
 ```
-benson@debian:~/.../week06/examples$ bir 0x00b50533
+$ bir 0x00b50533
 opcode    : [00,06](07 bits) = 0b0110011 0x33 51
 rd        : [07,11](05 bits) = 0b01010 0x0A 10
 funct3    : [12,14](03 bits) = 0b000 0x0 0
@@ -46,7 +48,7 @@ funct7    : [25,31](07 bits) = 0b0000000 0x00 0
 c:	ffe28293          	addi	t0,t0,-2
 ```
 ```
-benson@debian:~/.../week06/examples$ bii 0xffe28293
+$ bii 0xffe28293
 opcode    : [00,06](07 bits) = 0b0010011 0x13 19
 rd        : [07,11](05 bits) = 0b00101 0x05 5
 funct3    : [12,14](03 bits) = 0b000 0x0 0
