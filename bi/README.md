@@ -6,8 +6,7 @@ This directory contains the bi executable for riscv64 Linux and bi_aliases.
 
 Link (or copy) the bi binary to a location in your home directory that is on your PATH:
 ```
-$ cd ~/cs315/inclass/bi
-ln -s ~/cs315/inclass/bi/bi ~/.local/bin/bi
+$ ln -s ~/cs315/inclass/bi/bi ~/.local/bin/bi
 ```
 
 Add the contents of ```bi_aliases``` to your ```~/.bash_aliases``` file. Make sure to 
