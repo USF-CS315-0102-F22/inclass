@@ -1,0 +1,6 @@
+alias bir='bi 0,6,opcode 7,11,rd 12,14,funct3 15,19,rs1 20,24,rs2 25,31,funct7'
+alias bii='bi 0,6,opcode 7,11,rd 12,14,funct3 15,19,rs1 20,31,imm'
+alias bis='bi 0,6,opcode 7,11,imm_4_0 12,14,funct3 15,19,rs1 20,24,rs2 25,31,imm_11_5'
+alias bib='bi 0,6,opcode 7,11,imm_4_1_11 12,14,funct3 15,19,rs1 20,24,rs2 25,31,imm_12_10_5'
+alias biu='bi 0,6,opcode 7,11,rd 12,31,imm_31_12'
+alias bij='bi 0,6,opcode 7,11,rd 12,31,imm'
