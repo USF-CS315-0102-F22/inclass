@@ -6,7 +6,7 @@
 #include "rv_emu.h"
 
 int quadratic_c(uint64_t x, uint64_t a, uint64_t b, uint64_t c);
-int quadratic_s(int x, int a, int b, int c);
+int quadratic_s(uint64_t x, uint64_t a, uint64_t b, uint64_t c);
 
 int midpoint_c(uint64_t start, uint64_t end);
 int midpoint_s(uint64_t start, uint64_t end);
