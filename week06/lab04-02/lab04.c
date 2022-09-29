@@ -17,8 +17,8 @@ int max3_s(uint64_t a, uint64_t b, uint64_t c);
 int get_bitseq_c(uint64_t n, uint64_t start, uint64_t end);
 int get_bitseq_s(uint64_t n, uint64_t start, uint64_t end);
 
-uint64_t add2_c(uint64_t a, uint64_t b, uint64_t c);
-uint64_t add2_s(uint64_t a, uint64_t b, uint64_t c);
+int add2_c(uint64_t a, uint64_t b);
+int add2_s(uint64_t a, uint64_t b);    
 
 // quadratic_test calls the C, assembly, and emulated versions of quadratic
 void quadratic_test(uint64_t x, uint64_t a, uint64_t b, uint64_t c) {
@@ -84,17 +84,17 @@ void get_bitseq_test(uint64_t n, uint64_t start, uint64_t end) {
     printf("Emu: %d\n", r);
 }
 
-void add2_test(uint64_t a, uint64_t b, uint64_t c) {
+void add2_test(uint64_t a, uint64_t b) {
     int r;
     struct rv_state state;
 
-    r = add2_c(a, b, c);
+    r = add2_c(a, b);
     printf("C: %d\n", r);
 
-    r = add2_s(a, b, c);
+    r = add2_s(a, b);
     printf("Asm: %d\n", r);
 
-    rv_init(&state, (uint32_t *) add2_s, a, b, c, 0);
+    rv_init(&state, (uint32_t *) add2_s, a, b, 0, 0);
     r = rv_emulate(&state);
     printf("Emu: %d\n", r);
 }
@@ -130,8 +130,7 @@ int main(int argc, char **argv) {
     } else if (!strcmp(argv[1], "add2")) {
         int a = atoi(argv[2]);
         int b = atoi(argv[3]);
-        int c = atoi(argv[4]);
-        add2_test(a, b, c);
+        add2_test(a, b);
     } else {
         printf("usage: lab04 <prog> [<arg1> ...]\n");
         exit(-1);

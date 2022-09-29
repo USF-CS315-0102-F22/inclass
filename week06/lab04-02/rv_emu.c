@@ -48,9 +48,8 @@ void emu_r_type(struct rv_state *rsp, uint32_t iw) {
     uint32_t funct7 = (iw >> 25) & 0b1111111;    
 
     if (funct3 == 0b000 && funct7 == 0b0000000) {
+        // ADD
         rsp->regs[rd] = rsp->regs[rs1] + rsp->regs[rs2];
-    } else if (funct3 == 0b000 && funct7 == 0b0100000) {
-        rsp->regs[rd] = rsp->regs[rs1] - rsp->regs[rs2];
     } else {
         unsupported("R-type funct3", funct3);
     }
@@ -58,6 +57,7 @@ void emu_r_type(struct rv_state *rsp, uint32_t iw) {
 }
 
 void emu_jalr(struct rv_state *rsp, uint32_t iw) {
+    // RET
     uint32_t rs1 = (iw >> 15) & 0b1111;  // Will be ra (aka x1)
     uint64_t val = rsp->regs[rs1];  // Value of regs[1]
 
