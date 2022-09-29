@@ -50,6 +50,11 @@ void emu_r_type(struct rv_state *rsp, uint32_t iw) {
     if (funct3 == 0b000 && funct7 == 0b0000000) {
         // ADD
         rsp->regs[rd] = rsp->regs[rs1] + rsp->regs[rs2];
+
+    } else if (funct3 == 0b000 && funct7 == 0b0100000) {
+        // SUB
+        rsp->regs[rd] = rsp->regs[rs1] - rsp->regs[rs2];
+        
     } else {
         unsupported("R-type funct3", funct3);
     }

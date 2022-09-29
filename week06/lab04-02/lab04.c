@@ -20,6 +20,10 @@ int get_bitseq_s(uint64_t n, uint64_t start, uint64_t end);
 int add2_c(uint64_t a, uint64_t b);
 int add2_s(uint64_t a, uint64_t b);    
 
+int sub_c(uint64_t a, uint64_t b, uint64_t c);
+int sub_s(uint64_t a, uint64_t b, uint64_t c);    
+
+
 // quadratic_test calls the C, assembly, and emulated versions of quadratic
 void quadratic_test(uint64_t x, uint64_t a, uint64_t b, uint64_t c) {
     int r;
@@ -99,6 +103,21 @@ void add2_test(uint64_t a, uint64_t b) {
     printf("Emu: %d\n", r);
 }
 
+void sub_test(uint64_t a, uint64_t b, uint64_t c) {
+    int r;
+    struct rv_state state;
+
+    r = sub_c(a, b, c);
+    printf("C: %d\n", r);
+
+    r = sub_s(a, b, c);
+    printf("Asm: %d\n", r);
+
+    rv_init(&state, (uint32_t *) sub_s, a, b, c, 0);
+    r = rv_emulate(&state);
+    printf("Emu: %d\n", r);
+}
+
 
 int main(int argc, char **argv) {
     if (argc == 1) {
@@ -131,6 +150,11 @@ int main(int argc, char **argv) {
         int a = atoi(argv[2]);
         int b = atoi(argv[3]);
         add2_test(a, b);
+    } else if (!strcmp(argv[1], "sub")) {
+        int a = atoi(argv[2]);
+        int b = atoi(argv[3]);
+        int c = atoi(argv[4]);
+        sub_test(a, b, c);
     } else {
         printf("usage: lab04 <prog> [<arg1> ...]\n");
         exit(-1);
