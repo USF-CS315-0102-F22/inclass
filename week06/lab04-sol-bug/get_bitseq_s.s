@@ -11,7 +11,7 @@ get_bitseq_s:
     addi t0, t0, 1              # len = end - start + 1
 
     li t2, 64                   # special case but is the mask necessary? 
-    bne t0, t2, build_mask      # can't we just return the number?
+    bne t0, t2, build_mask      # can we just return the number?
     mv t1, a0
     li t2, 0xFFFFFFFFFFFFFFFF
     j apply_mask
