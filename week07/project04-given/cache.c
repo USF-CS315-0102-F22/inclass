@@ -112,6 +112,7 @@ uint32_t cache_lookup_dm(struct cache_st *csp, uint64_t addr) {
         slot->tag = tag;
 
         // Need to change for block size > 1
+        slot->block[b_index] = *((uint32_t *) addr);
         data = slot->block[b_index];
     }
     

@@ -102,9 +102,9 @@ void rv_one(struct rv_state *rsp) {
         uint32_t iw = *pc;
     */
 
-    iw = *(uint32_t*) rsp->pc;
+    //iw = *(uint32_t*) rsp->pc;
     // Use below to add cache
-    //iw = cache_lookup(&rsp->i_cache, (uint64_t) rsp->pc);
+    iw = cache_lookup(&rsp->i_cache, (uint64_t) rsp->pc);
 
     uint32_t opcode = iw & 0b1111111;
     switch (opcode) {
