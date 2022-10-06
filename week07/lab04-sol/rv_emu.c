@@ -143,8 +143,8 @@ void emu_j_type(struct rv_state *rsp, uint32_t iw) {
     uint64_t imm_11 = (iw >> 20) & 0b1;
     uint64_t imm_19_12 = (iw >> 12) & 0xFFF;
 
-    int64_t imm = (imm_20 << 20) | (imm_19_12 << 19) | (imm_11 << 11) | (imm_10_1 << 10);
-    imm = (imm << 44) >> 44;
+    int64_t imm = (imm_20 << 20) | (imm_19_12 << 12) | (imm_11 << 11) | (imm_10_1 << 1);
+    imm = (imm <<  43) >> 43;
 
     // JAL support
     if (rd != 0) {
