@@ -8,7 +8,7 @@
     a3 is end index
 */
 
-.align 16
+.align 4
 merge_sort_s:
     addi sp, sp, -32            # prologue
     sd ra, (sp)

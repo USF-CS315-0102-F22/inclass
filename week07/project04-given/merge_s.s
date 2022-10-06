@@ -7,7 +7,7 @@
     a3 is the end index
 */
 
-.align 16
+.align 4
 merge_s:
     add t0, a2, a3              # start + end
     srli t0, t0, 1              # mid = (start + end) / 2

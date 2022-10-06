@@ -6,7 +6,7 @@
     a2 is the end index to test
 */
 
-.align 16
+.align 4
 pal_rec_s:
     blt a1, a2, check_eq    # done if end >= start
     li a0, 1                # is pal if we hit the base case
