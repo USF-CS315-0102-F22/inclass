@@ -87,7 +87,7 @@ void emu_r_type(struct rv_state *rsp, uint32_t iw) {
 
 void emu_jalr(struct rv_state *rsp, uint32_t iw) {
     // RET
-    uint32_t rs1 = (iw >> 15) & 0b1111;  // Will be ra (aka x1)
+    uint32_t rs1 = (iw >> 15) & 0b11111;  // Will be ra (aka x1)
     uint64_t val = rsp->regs[rs1];  // Value of regs[1]
 
     rsp->pc = val;  // PC = return address
