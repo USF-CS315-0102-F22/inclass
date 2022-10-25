@@ -139,9 +139,9 @@ void emu_b_type(struct rv_state *rsp, uint32_t iw) {
 void emu_j_type(struct rv_state *rsp, uint32_t iw) {
     uint32_t rd = (iw >> 7) & 0b11111;
     uint64_t imm_20 = (iw >> 31) & 0b1;
-    uint64_t imm_10_1 = (iw >> 21) & 0x1FF;
+    uint64_t imm_10_1 = (iw >> 21) & 0x3FF;
     uint64_t imm_11 = (iw >> 20) & 0b1;
-    uint64_t imm_19_12 = (iw >> 12) & 0xFFF;
+    uint64_t imm_19_12 = (iw >> 12) & 0xFF;
 
     int64_t imm = (imm_20 << 20) | (imm_19_12 << 12) | (imm_11 << 11) | (imm_10_1 << 1);
     imm = (imm <<  43) >> 43;

@@ -42,10 +42,13 @@ void cache_init(struct cache_st *csp) {
 }
 
 void cache_print(struct cache_st *csp, char *name) {
+    int num_slots;
     int num_slots_used = 0;
     int i;
 
-    for (i = 0; i < csp->size; i++) {
+    num_slots = csp->size / csp->block_size;
+
+    for (i = 0; i < num_slots; i++) {
         if (csp->slots[i].valid == 1) {
             num_slots_used += 1;
         }

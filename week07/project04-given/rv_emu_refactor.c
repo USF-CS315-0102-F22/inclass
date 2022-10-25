@@ -76,26 +76,29 @@ struct rv_decode_st {
     uint32_t funct3;
     uint32_t funct6;
     uint32_t funct7;
-    int63_t imm_i;
-    int63_t imm_s;
-    ...
+    int64_t imm_i;
+    int64_t imm_s;
+    int64_t imm_b;    
+    int64_t imm_u;
+    int64_t imm_j
 }
+
 
 void emu_decode(uint32_t iw, struct rv_decode_st *rdp) {
-    rdp->rd = (iw >> 7) & 0b11111;
+    rdp->rd = (iw >> 7) & 0b11111;    
+    rdp->rs1 = (iw >> 15) & 0b11111;
     ...
+    // All immediate extraction
 }
 
-uint32_t emu_decode_rd(uint32_t iw) {
-    return (iw >> 7) & 0b11111;
-}
 
+uint32_t emu_decode_rd(iw) {
+
+
+}
 
 void emu_r_type(struct rv_state *rsp, uint32_t iw) {
-    uint32_t rd = (iw >> 7) & 0b11111;
-
-    uint32_t rd = get_bitseq(iw, 7, 11);
-    
+    uint32_t rd = (iw >> 7) & 0b11111;    
     uint32_t rs1 = (iw >> 15) & 0b11111;
     uint32_t rs2 = (iw >> 20) & 0b11111;
     uint32_t funct3 = (iw >> 12) & 0b111;
@@ -121,6 +124,7 @@ void emu_jalr(struct rv_state *rsp, uint32_t iw) {
 void rv_one(struct rv_state *rsp) {
 
     uint32_t iw;
+    struct rv_decode_st rv_decode;
 
     /* could also think of below as:
         uint32_t *pc = (uint32_t*) rsp->pc;
@@ -131,14 +135,14 @@ void rv_one(struct rv_state *rsp) {
     // Use below to add cache
     iw = cache_lookup(&rsp->i_cache, (uint64_t) rsp->pc);
 
-    struct rv_decode_st decode;
-    emu_decode(iw, &decode);
+    
+    emu_decode(iw, &rv_decode);
 
     uint32_t opcode = iw & 0b1111111;
     switch (opcode) {
         case 0b0110011:
             // R-type instructions have two register operands
-            emu_r_type(rsp, iw, &decode);
+            emu_r_type(rsp, iw, &rv_decode);
             break;
         case 0b1100111:
             // JALR (aka RET) is a variant of I-type instructions
