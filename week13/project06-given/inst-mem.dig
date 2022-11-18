@@ -1029,12 +1029,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>20-is-pal</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>20-is-pal</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1055,12 +1055,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>21-to-upper</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>21-to-upper</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1082,12 +1082,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>22-sort</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>22-sort</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1185,12 +1185,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>23-merge-sort</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>23-merge-sort</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1203,7 +1203,7 @@
 ,613,500693,fc000ef,513,4a283,2029293,556533,44a283,556533,593
 ,84a283,2029293,55e5b3,c4a283,55e5b3,613,104a283,2029293,566633
 ,144a283,566633,c0001073,d602b3,12d293,128293,60313,28393,60e13
-,6de4463,2e1e93,1d58f33,239713,e50733,72703,231793,f507b3,7a783
+,7c6c463,2e1e93,1d58f33,239713,e50733,72703,231793,f507b3,7a783
 ,629863,ef2023,138393,300006f,168813,1039863,ff2023,130313,1c0006f
 ,e7d863,ff2023,130313,c0006f,ef2023,138393,1e0e13,f9dff06f,50293
 ,58313,60393,76ce63,32e03,1c2a023,428293,430313,138393,fe9ff06f
