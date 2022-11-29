@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes>
+    <entry>
+      <string>shapeType</string>
+      <shapeType>LAYOUT</shapeType>
+    </entry>
+    <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>204</red>
+        <green>204</green>
+        <blue>204</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
+      <string>Label</string>
+      <string>IF/DR Register</string>
+    </entry>
+    <entry>
+      <string>Height</string>
+      <int>32</int>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>6</int>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>IW_0</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="-240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>PC_0</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>PC4_0</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>CLK</string>
+        </entry>
+      </elementAttributes>
+      <pos x="180" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>EN</string>
+        </entry>
+      </elementAttributes>
+      <pos x="220" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>CLR</string>
+        </entry>
+      </elementAttributes>
+      <pos x="260" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>IW_1</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="-220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>PC_1</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>PC4_1</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>64</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>register-with-clr-32bits.dig</elementName>
+      <elementAttributes/>
+      <pos x="280" y="-260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>register-with-clr-64bits.dig</elementName>
+      <elementAttributes/>
+      <pos x="280" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>register-with-clr-64bits.dig</elementName>
+      <elementAttributes/>
+      <pos x="280" y="60"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="140" y="80"/>
+      <p2 x="280" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="-180"/>
+      <p2 x="280" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="-20"/>
+      <p2 x="280" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="100"/>
+      <p2 x="280" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="100"/>
+      <p2 x="460" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-200"/>
+      <p2 x="280" y="-200"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-40"/>
+      <p2 x="280" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="120"/>
+      <p2 x="280" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-60"/>
+      <p2 x="280" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="-60"/>
+      <p2 x="460" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-220"/>
+      <p2 x="280" y="-220"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="-220"/>
+      <p2 x="460" y="-220"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="140"/>
+      <p2 x="280" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="-80"/>
+      <p2 x="280" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="-240"/>
+      <p2 x="280" y="-240"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-220"/>
+      <p2 x="180" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-60"/>
+      <p2 x="180" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="100"/>
+      <p2 x="180" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="-180"/>
+      <p2 x="260" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="140"/>
+      <p2 x="260" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="260" y="-20"/>
+      <p2 x="260" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-200"/>
+      <p2 x="220" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="120"/>
+      <p2 x="220" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-40"/>
+      <p2 x="220" y="120"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
