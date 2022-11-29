@@ -5,8 +5,8 @@ main:
     addi a0, a0, 1
     li t0, 0
     li t1, 99
-    sw t1, (t0)
-    lw t1, (t0)
+    sd t1, (t0)
+    ld t1, (t0)
     add a0, t1, 1      # a0 should be 100
     unimp              # end marker
     nop
