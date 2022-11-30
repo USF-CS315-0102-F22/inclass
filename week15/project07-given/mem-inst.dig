@@ -151,12 +151,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>01-add-2nop</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>01-add-2nop</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -173,12 +173,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>02-jal</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>02-jal</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -196,12 +196,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>03-lw</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>03-lw</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -209,7 +209,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>100593,200613,c58533,150513,293,6300313,62a023,2a303,130513,c0001073
+          <data>100593,200613,c58533,150513,293,6300313,62b023,2b303,130513,c0001073
 ,4*13</data>
         </entry>
       </elementAttributes>
@@ -219,12 +219,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>04-add-fwd</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>04-add-fwd</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -241,12 +241,12 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>05-lw-stl</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>05-lw-stl</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -254,7 +254,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>513,100593,b52023,52603,160513,c0001073</data>
+          <data>513,100593,b53023,53603,160513,c0001073</data>
         </entry>
       </elementAttributes>
       <pos x="660" y="500"/>
@@ -263,16 +263,20 @@
       <elementName>ROM</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>06-jal-fls</string>
-        </entry>
-        <entry>
           <string>AddrBits</string>
           <int>8</int>
         </entry>
         <entry>
+          <string>Label</string>
+          <string>06-jal-fls</string>
+        </entry>
+        <entry>
           <string>Bits</string>
           <int>32</int>
+        </entry>
+        <entry>
+          <string>Data</string>
+          <data>200513,8000ef,c0001073,450513,8067</data>
         </entry>
       </elementAttributes>
       <pos x="660" y="640"/>
