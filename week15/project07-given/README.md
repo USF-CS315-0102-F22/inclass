@@ -1,5 +1,6 @@
 # Control Line Key for Given Project07 Pipelined Processor
 
+```text
 IW   - Instruction Word (32 bits)
 
 RR0  - Read Register 0 (5 bits)
@@ -31,3 +32,4 @@ PCbr - PCbr MUX Selector
 ALUR - ALU Result (64 bits)
 RD0  - Read Data 0 value (64 bits)
 RD1  - Read Data 1 value (64 bits)
+```
