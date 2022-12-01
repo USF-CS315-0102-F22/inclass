@@ -3722,10 +3722,6 @@ Write Back</string>
   </visualElements>
   <wires>
     <wire>
-      <p1 x="860" y="920"/>
-      <p2 x="3220" y="940"/>
-    </wire>
-    <wire>
       <p1 x="220" y="640"/>
       <p2 x="260" y="640"/>
     </wire>
@@ -4026,10 +4022,6 @@ Write Back</string>
       <p2 x="1660" y="280"/>
     </wire>
     <wire>
-      <p1 x="-20" y="920"/>
-      <p2 x="860" y="920"/>
-    </wire>
-    <wire>
       <p1 x="3260" y="920"/>
       <p2 x="3280" y="920"/>
     </wire>
@@ -4164,6 +4156,14 @@ Write Back</string>
     <wire>
       <p1 x="2000" y="40"/>
       <p2 x="2020" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="940"/>
+      <p2 x="860" y="940"/>
+    </wire>
+    <wire>
+      <p1 x="860" y="940"/>
+      <p2 x="3220" y="940"/>
     </wire>
     <wire>
       <p1 x="440" y="300"/>
@@ -4999,7 +4999,7 @@ Write Back</string>
     </wire>
     <wire>
       <p1 x="-20" y="460"/>
-      <p2 x="-20" y="920"/>
+      <p2 x="-20" y="940"/>
     </wire>
     <wire>
       <p1 x="20" y="420"/>
@@ -5235,7 +5235,7 @@ Write Back</string>
     </wire>
     <wire>
       <p1 x="860" y="580"/>
-      <p2 x="860" y="920"/>
+      <p2 x="860" y="940"/>
     </wire>
     <wire>
       <p1 x="220" y="460"/>
